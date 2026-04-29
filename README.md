@@ -1,6 +1,6 @@
 # C++ Practice/Review
 
-### Apr-26-26 (Hello World & The Basics)
+### 4-26-26 (Hello World & The Basics)
     - C Basic Strcture
         + Include standard lib
         + Main function
@@ -22,12 +22,12 @@
 
     - Namespaces (assigning different values to a variable with the samenames in different namespaces)
         + Refer to a specific namespace **namespace_name:variable_name**
-        + Can change the defult namespace with the **using** Key
+        + Can change the defult namespace with the *using* Key
 
     - Type Def
         + typedef std::string text_t;
 
-### Apr-27-26 (Hypotense Calculator, If, Switch)
+### 4-27-26 (Hypotense Calculator, If, Switch)
     - Hypotense Calculator
         + cmath Sqrt and Pow func
         + double var
@@ -38,3 +38,7 @@
 
     - Switch case
         + Cases and Default case
+
+### 4-28-26 (Operations Calculator)
+    - Calculator to do basic math operations (- + * /)
+
