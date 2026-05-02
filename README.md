@@ -42,3 +42,39 @@
 ### 4-28-26 (Operations Calculator)
     - Calculator to do basic math operations (- + * /)
 
+### 5-2-26 (More Control Flow & Random event generation)
+    - Useful String Methods
+        + .length() returns length
+        + .empty()  returns bool
+        + .clear()  clears a string
+        + .append(<String to append>) Appends a string to a string
+        + .at(<index>) returns char in string at sepcified index
+        + .insert(<Index>, <String>) inserts string a specfifc index
+        + .find(<char>) finds index of char
+        + .erase(<beginning index>, <end index>) erase string from beginning index to end index. not incluse of end index
+
+    - While Loop: Loops code until the condition is met
+
+    - Do While Loop: Runs code in loop once, then checks condition. If the condition is not met then the continues on until the condition is met
+
+    - For Loop: loops based on assigned increment. 
+
+    - break keyword: breaks from code
+
+    - continue keyword: skips an iteration
+
+    - Loops can be nested. useful to move through rows and and columns
+
+    - Generating Random Numbers *close enough to random numbers*
+
+    - Random event generation project
+        + Use random numbers to determine an in Game event
+            ~ Ternary Operator
+            ~ Switch
+            ~ Do While
+            ~ Random Numbers
+
+
+
+
+
