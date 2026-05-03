@@ -74,6 +74,18 @@
             ~ Do While
             ~ Random Numbers
 
+### 5-3-26 (Number Guess | User Defined Functions | Rock Paper Scissors)
+    - Random Number Guess
+    - Functions
+        + Must be Declared or Defined before the main function
+        + Overloaded Functions: Function that share the same name with different parameters each.
+        + return keyword: Used to return value from a type defined function
+    - Local V Global Variables
+        + Local Var: Variables defined within a fucntion to be accessed within the function. (Preffered as less things can change it)
+        + Global Var: Variables defined outside the function be accessed to the scope levels below.
+    - Rock Paper Scissors
+
+
 
 
 
