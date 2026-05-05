@@ -81,9 +81,25 @@
         + Overloaded Functions: Function that share the same name with different parameters each.
         + return keyword: Used to return value from a type defined function
     - Local V Global Variables
-        + Local Var: Variables defined within a fucntion to be accessed within the function. (Preffered as less things can change it)
+        + Local Var: Variables defined within a fucntion to be accessed within the function. (Preffered as less thingds can change it)
         + Global Var: Variables defined outside the function be accessed to the scope levels below.
     - Rock Paper Scissors
+    - Arrays
+        + Can be passed to a function (Size will need to be passed as well)
+    - For Each Loop
+    - Bubblesort
+
+### 5-4-26 (Quiz Game | Temperature conversion | Ternary Operator | Memory address & Pointers)
+    - Quiz Game
+        + Multi Dimensional Array
+    - &: Used to refer to memory address of a Var
+    - By Value vs By Reference
+    - Const Parameter
+        + Conveys intent and keep parameters secure in function
+        
+
+
+
 
 
 
