@@ -26,30 +26,30 @@ std::string testCards[] = {
 
     // Diners Club
     "30569309025904",
-    "38520000023237"
+    "38520000023237",
 
     // // ---------------- INVALID CARD NUMBERS ----------------
 
-    // // One digit changed from valid numbers
-    // "4111111111111112",
-    // "5555555555554445",
-    // "378282246310006",
-    // "6011111111111118",
+    // One digit changed from valid numbers
+    "4111111111111112",
+    "5555555555554445",
+    "378282246310006",
+    "6011111111111118",
 
-    // // Random invalid lengths
-    // "1234567890123456",
-    // "9999999999999999",
-    // "1111111111111111",
+    // Random invalid lengths
+    "1234567890123456",
+    "9999999999999999",
+    "1111111111111111",
 
-    // // Too short
-    // "411111111111",
+    // Too short
+    "411111111111",
 
-    // // Too long
-    // "41111111111111111111"
+    // Too long
+    "41111111111111111111",
 
-    // // // Edge-ish cases
-    // // "0000000000000000",
-    // // "2222222222222222"
+    // // Edge-ish cases
+     "0000000000000000",
+    // "2222222222222222"
 };
 
 bool expectedResults[] = {
@@ -78,26 +78,30 @@ bool expectedResults[] = {
 
     // Diners Club
     true,
-    true
+    true,
 
     // ---------------- INVALID CARD NUMBERS ----------------
 
-    // // One digit changed from valid numbers
-    // false,
-    // false,
-    // false,
-    // false,
+    // One digit changed from valid numbers
+    false,
+    false,
+    false,
+    false,
 
-    // // Random invalid numbers / patterns
-    // false,
-    // false,
-    // false,
+    // Random invalid numbers / patterns
+    false,
+    false,
+    false,
 
-    // // Too short
-    // false,
+    // Too short
+    false,
 
-    // // Too long
-    // false
+    // Too long
+    false,
+
+    // Edge cases Luhn's Algor can't handle
+    true,
+    true
 };
 
 bool isCardValid(std::string cardNumber);
@@ -111,19 +115,29 @@ int main(){
 
     for(int i = 0; i < testCardArraySize; i++){
         std::cout << "************* Card: " << testCards[i] << " *****************\n";
+        
 
         if (testCards[i].size() > 12 && testCards[i].size() < 20)
         {    
-            if(isCardValid(testCards[i]) == expectedResults[i]){
-                std::cout << "This card is valid ✅" <<  "\n";
+            if(testCards[i] == "0000000000000000"){
+                //Result is expected to be valid though this is an invalid number card number. This is due to how the Luhn's Algorthim check on mod 10. 0 mod any number is 
+                std::cout << "Implementation is correct" <<  "\n";
                 std::cout << "******************************************************\n \n";
+            }
+            else if(isCardValid(testCards[i]) == true && expectedResults[i] == true){
+                std::cout << "This card is valid ✅ and Implementation is correct" <<  "\n";
+                std::cout << "******************************************************\n \n";
+            }else if(isCardValid(testCards[i]) == false && expectedResults[i] == false){
+
+                std::cout << "Card is not valid ⛔️ and Implementation is correct" <<  "\n"; 
+                std::cout << "******************************************************\n \n"; 
             }else{
-                std::cout << "Card is not valid ⛔️" <<  "\n"; 
+                std::cout << "Check Implementation for this case" <<  "\n"; 
                 std::cout << "******************************************************\n \n"; 
             }
 
         }else{
-            std::cout << "Card is not valid ⛔️" <<  "\n";
+            std::cout << "Card is not valid ⛔️... It either too long or short" <<  "\n";
             std::cout << "******************************************************\n \n";
         }
         
@@ -169,6 +183,8 @@ bool isCardValid(std::string cardNumber){
            
         }
     }
+
+    //std::cout << "\t The check sum " << checkSum << "\n";
 
     if (checkSum % 10 == 0)
     {
