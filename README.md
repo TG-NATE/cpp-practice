@@ -96,6 +96,12 @@
     - By Value vs By Reference
     - Const Parameter
         + Conveys intent and keep parameters secure in function
+
+### 5-4-26 (Luhn's Algorithm Implementation (isCardValid))
+    - Implemented for Valid Visa, AMEX, Discover, & Dinner's Club Cards
+    - Personal Reminders
+        + Must subtract '0' from string.at(n value) to convert number char to int
+
         
 
 
