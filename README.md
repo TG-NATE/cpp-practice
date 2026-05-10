@@ -102,6 +102,7 @@
     - Personal Reminders
         + Must subtract '0' from string.at(n value) to convert number char to int
     - Most Invalid cases are corrected 
+    - Luhn's Algorithm Limitation is that it cannot confirm if a card is Authentic, just that it could be a valid card number.
 
         
 

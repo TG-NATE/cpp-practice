@@ -121,7 +121,7 @@ int main(){
         {    
             if(testCards[i] == "0000000000000000"){
                 //Result is expected to be valid though this is an invalid number card number. This is due to how the Luhn's Algorthim check on mod 10. 0 mod any number is 
-                std::cout << "Implementation is correct" <<  "\n";
+                std::cout << "Implementation is correct. Luhns Algorthim can't Handle this case" <<  "\n";
                 std::cout << "******************************************************\n \n";
             }
             else if(isCardValid(testCards[i]) == true && expectedResults[i] == true){
