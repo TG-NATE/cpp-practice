@@ -23,8 +23,19 @@ int main(){
         playerMove(spaces, player);
         drawBoard(spaces);
 
+        running = checkWinner(spaces, player, computa);
+
+        if (running == false)
+        {
+            break;
+        }
+        
+
         computaMove(spaces, computa);
         drawBoard(spaces);
+
+        running = checkWinner(spaces, player, computa);
+        
         
 
     } while (running == true);
@@ -98,10 +109,55 @@ void computaMove(char *spaces, char computa){
 }
 
 bool checkWinner(char *spaces, char player, char computa){
+    char winner;
 
-    return 0;
-}
-bool checkTie(char *spaces){
+    if(spaces[0] == player && spaces[1] == player && spaces[2] == player || spaces[0] == computa && spaces[1] == computa && spaces[2] == computa)
+    {
+        winner = spaces[0];
+    }else if (spaces[0] == player && spaces[4] == player && spaces[8] == player || spaces[0] == computa && spaces[4] == computa && spaces[8] == computa)
+    {
+        winner = spaces[0];
+    }else if (spaces[0] == player && spaces[3] == player && spaces[6] == player || spaces[0] == computa && spaces[3] == computa && spaces[6] == computa)
+    {
+        winner = spaces[0];
+    }else if (spaces[3] == player && spaces[4] == player && spaces[5] == player || spaces[3] == computa && spaces[4] == computa && spaces[5] == computa)
+    {
+        winner = spaces[4];
+    }else if (spaces[6] == player && spaces[7] == player && spaces[8] == player || spaces[6] == computa && spaces[7] == computa && spaces[8] == computa)
+    {
+        winner = spaces[7];
+    }else if (spaces[1] == player && spaces[4] == player && spaces[7] == player || spaces[1] == computa && spaces[4] == computa && spaces[7] == computa)
+    {
+        winner = spaces[1];
+    }else if (spaces[2] == player && spaces[5] == player && spaces[8] == player || spaces[2] == computa && spaces[5] == computa && spaces[8] == computa)
+    {
+        winner = spaces[2];
+    }
     
+    if(winner == player){
+        std::cout << "You Won!\n";
+        return 0;
+    }else if(winner == computa){
+        std::cout << "Computa Won!\n";
+        return 0;
+    }else{
+        return 1;
+    }
+}
+
+
+bool checkTie(char *spaces){
+
+    for(int i = 0; i < 10; i++){
+
+        if (spaces[i] == ' ')
+        {
+            return 1;
+        }
+        
+
+    }
+
+    std::cout << "There's a Tie\n"; 
     return 0;
 }
